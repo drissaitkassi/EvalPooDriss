@@ -1,4 +1,6 @@
-public class Accesoir extends  Produit{
+import java.util.Collections;
+
+public class Accesoir extends Produit  {
     public Accesoir(String nom, double prix, int nombreExemplaire) throws IllegalAccessException {
         super(nom, prix, nombreExemplaire);
     }
@@ -15,4 +17,7 @@ public class Accesoir extends  Produit{
             throw new RuntimeException(e);
         }
     }
+
+
+
 }

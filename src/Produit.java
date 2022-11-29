@@ -1,4 +1,7 @@
-public  abstract class Produit implements Sold {
+import java.util.Collection;
+import java.util.Collections;
+
+public  abstract class Produit implements Sold ,Comparable<Produit>{
 
 
     static int numero=0;
@@ -59,5 +62,11 @@ public  abstract class Produit implements Sold {
         if (quantite>this.nombreExemplaire)throw new IllegalAccessException(" Quantite indisponible");
         chiffreAffaire+=this.prix*quantite;
         this.nombreExemplaire=nombreExemplaire-quantite;
+    }
+
+    @Override
+    public int compareTo(Produit o) {
+        return Double.compare(this.prix,o.prix);
+
     }
 }

@@ -1,4 +1,4 @@
-public class Vetement extends Produit{
+public class Vetement extends Produit {
 
     private int taille;
     public Vetement(String nom, double prix, int nombreExemplaire,int taille) throws IllegalAccessException {
@@ -29,4 +29,7 @@ public class Vetement extends Produit{
        return "Vetement "+super.toString()+ " taille: " +this.taille;
 
     }
+
+
+
 }
